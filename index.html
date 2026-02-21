@@ -13,11 +13,11 @@
     <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
     <script src="libs/pymjs-1.3.2/pym.v1.js"></script>
     <script src="libs/widgetframe-binding-0.3.1/widgetframe.js"></script>
-    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
-    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="libs/css/zuwm.css" type="text/css" />
     <link rel="stylesheet" href="libs/css/zuwm-fonts.css" type="text/css" />
   </head>
@@ -54,11 +54,21 @@ class: title-slide, center, middle
 - Case study and exercise
 
 ---
+# Remember 
+
+`$$ICER = \frac{\Delta Cost}{\Delta Effectiveness} = \frac{{Cost_{Int}}-Cost_{Status Quo}}{Effectiveness_{Int}-Effectiveness_{Status Quo}}$$`
+- ### We care about 
+
+  - Incremental health effectiveness (`\(\Delta\)` Effectiveness)
+
+---
 # Effectiveness measures
 
 ### Effectiveness is measured by health consequences
 
-- The common measures are 
+- ### What are the common measures of health conseqences?
+
+--
 
    - Health outcomes 
   
@@ -120,12 +130,12 @@ CE = 3000/4 = $750 per mmHg
 ---
 # Need for combining length and quality 
 
-Assessing the disease burden of a country or a region, to see which health problems are greatest, and how one country or region compares with another.
+- Assessing the disease burden of a country or a region, to see which health problems are greatest, and how one country or region .red[compares] with another.
 
-Evaluating a program that may impact both mortality and morbidity, as well as intermediate process indicators. 
+- Evaluating a program that may impact .red[both mortality] and .red[morbidity], as well as intermediate process indicators. 
   
 ---
-# Quality-adjusted life years
+# Quality-adjusted life years (QALYs)
 
 .pull-left[
 
@@ -143,6 +153,11 @@ Some interventions may have a combination of multiple impact
 
 &lt;img src="libs/pic/s3-F1.png" wideth= "100%"&gt;
 ]
+
+---
+# QALYs continue... 
+
+&lt;iframe width="1200" height="500" src="https://www.youtube.com/embed/l69St-vJnM8" title="QALY in Health Economic Evaluations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
 
 ---
 
@@ -180,16 +195,6 @@ QALYs saved = 0.5-0.4 =0.1
 QALYs saved = `\((1-Q)*\text{life years} = (1-0.8)*\frac{6}{12}\)`=0.1
 
 ---
-
-# Disability adjusted life years (DALYs)
-
-### DALYs = disability weight * life years 
-
-[Lancet article](https://www.thelancet.com/action/showPdf?pii=S2214-109X%2815%2900069-8) provide the disability weight for more than 200 conditions. 
-
-Use the similar approach as QALYs .red[gained] to estimate DALYs .red[averted] due the intervention. 
-
----
 # Measuring quality of life 
 
 .panelset.sideways[
@@ -220,9 +225,149 @@ Utility value of one year in chronic health state is x/t
 
 ]
 ---
+
+# EQ-5D survey
+
+[Survey link](https://docs.google.com/forms/d/1Nxd2lqt2JecyptbDa4XfHz7krGxCxDftXHnLIcgoHzg/edit)
+
+---
+## EQ-5D scoring 
+
+.pull-left[
+&lt;table class=" lightable-classic table" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto; font-size: 10px; color: black; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; ...1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Mobility &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Coefficients &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have no problems in walking about &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have some problems in walking about &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I am confined to bed &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.31 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Self-Care &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have no problems with self-care &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have some problems washing or dressing myself &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I am unable to wash or dress myself &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.21 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Usual Activities &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have no problems with performing my usual activities &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have some problems with performing my usual activities &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I am unable to perform my usual activities &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.09 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Pain/Discomfort &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have no pain or discomfort &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have moderate pain or discomfort &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.12 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I have extreme pain or discomfort &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.39 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Anxiety/Depression &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I am not anxious or depressed &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I am moderately anxious or depressed &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I am extremely anxious or depressed &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.24 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Constant (if any disfunction) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.08 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; N3 (if any dimnsion is at level 3) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.27 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+
+If someone choose 1 1 2 2 3  in the correspoinding dimention, then 
+
+his/her quality of life (utility) is 
+
+1 - 0.081 -0.269 - 0 - 0 - 0.036 - 0.123 - 0.236 = 0.255
+
+]
+
+---
 # Time trade-off example 
 
 A person with chronic pain would live for another 10 years. He/she will be indifferent between living for 10 years with chronic pain and living for 6 years with perfect of health. What is his/her quality of life? 
+
+--
 
 `$$6/10 = 0.6$$`
 
@@ -246,8 +391,8 @@ Calculating Utility: This indifference point helps calculate a utility score (U)
 
 .pull-right[
 
-<div id="htmlwidget-0aa86e5524abf38b88ab" style="width:100%;height:2100px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0aa86e5524abf38b88ab">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-1.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-42acb6d951e836befd69" style="width:100%;height:2100px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-42acb6d951e836befd69">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ]
 ---
@@ -258,6 +403,8 @@ Calculating Utility: This indifference point helps calculate a utility score (U)
 - WHO Quality of life questionnair
 
 ---
+exclude: TRUE
+
 # Quality-adjusted life **years** (QALYs)
 
 .pull-left[
@@ -397,7 +544,7 @@ QALYs = `\(\sum_{0}^{n}Q*\frac{1}{(1+r)^n}\)` where `r` is discount rate and `n`
 ---
 # Graph of discount factor (3%)
 
-&lt;img src="index_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 # Rule of 72
@@ -504,7 +651,7 @@ Assuming that a person will live for another 6 years, what is the present value 
 
 Use the similar approach as QALYs .red[gained] to estimate DALYs .red[averted] due the intervention. 
 
-It is a measure of the disease burden in the population. It is also widely used in the cost-effectiveness analysis
+It is a measure of the .red[disease burden] in the population. It is also widely used in the cost-effectiveness analysis
 ]
 
 .pull-right[
@@ -512,6 +659,7 @@ It is a measure of the disease burden in the population. It is also widely used 
 &lt;embed src="libs/pic/Salomon-2015-Lancet.pdf" width="100%" height="500px" style="display: block; margin: auto;" type="application/pdf" /&gt;
 
 ]
+
 ---
 # DALYs: Disability-adjusted life years 
 
@@ -527,15 +675,20 @@ It is a measure of the disease burden in the population. It is also widely used 
 
 ### Similar to QALYs, the future life years should be discounted. 
 ---
+# DALYs continue 
+
+&lt;iframe width="897" height="505" src="https://www.youtube.com/embed/ekAysj93x1w" title="2 7  DALY and QALY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
 # Burden of disease 
 
-<div id="htmlwidget-e9df5b93ac9bd963865d" style="width:100%;height:2100px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e9df5b93ac9bd963865d">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-4.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a92f7a2117bdfadc669f" style="width:100%;height:2100px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a92f7a2117bdfadc669f">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 ---
 # Burden per person with disease 
 
-<div id="htmlwidget-cd489b1594daefa70967" style="width:100%;height:2100px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cd489b1594daefa70967">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-cb3bbb9eb8c6d128c125" style="width:100%;height:2100px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cb3bbb9eb8c6d128c125">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-6.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 # Example: Disease burden of dengue 
@@ -615,19 +768,302 @@ You are a public health analyst estimating the burden of Disease X in Country A 
   
   - mortality 
   
-  - DAlYs 
+  - DALYs 
   
 ---
-# Practice 
+# Practice (10 minutes)
 
 ### What the incidence, prevalance, and disease burden of pneumonia in the United States in 2020 ?
 
 ### What the incidence, prevalance, and disease burden of HIV/AIDS in the South Africa in 2020 ?
 
 ---
-# Excercise
+# Excercise (15 minutes)
 
-Set up an Excel table to estimate disease burden of Country X. 
+Set up an Excel table to estimate disease burden of diabetes in Glucosia. 
+
+**Estimating the Burden of Diabetes in the Republic of Glucosia (2025)**
+
+The Republic of Glucosia is a middle-income country undergoing rapid urbanization and demographic transition. Non-communicable diseases have overtaken infectious diseases as the leading causes of death.
+
+In 2025, the Ministry of Health commissioned a burden of disease study to estimate the impact of diabetes mellitus using Disability-Adjusted Life Years (DALYs).
+
+You are part of the analytic team tasked with estimating the national burden of diabetes.
+
+---
+# Key statistics 
+
+.pull-left[
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Parameters &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Values &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total population &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5000000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Age distribution &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 0-39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2400000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 40-59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2100000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 60+ &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1500000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Epidemiological information &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Overall diabetes prevalance &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.08 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total diabetes deaths &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Average age at death from diabetes (years) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 62.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Life expectancy at age 62 (years) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Task 1: Calculate Total Number of Diabetes Cases
+
+Task 2: Calculate Years of Life Lost (YLL)
+
+]
+
+.pull-right[
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Parameters &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Values &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Complication breakdown &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Uncomplicated diabetes &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.700 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Moderate complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Severe complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.100 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Disability weights &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Uncomplicated diabetes &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.049 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Moderate complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.133 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Severe complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.195 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Task 3: Calculate Years Lived with Disability (YLD)
+
+Task 4: Calculate Total DALYs
+
+Task 5: Calculate DALYs per 100,000 Population
+
+]
+
+---
+
+# Excercise continue 
+
+To address the diabetes in Glucosia, the country initiated a health education program. While the education program was not able to reduced the prevalance of diabetes, it reduces the annual mortality by 1/3, and reduces the share of patients with severe complication to 5%. Correspondingly, the share of patients with moderate complication increases to 25%. 
+
+## Question: How many DALYs are averted due to the health education program?
+
+---
+# Disease burden before the health education program
+
+YLL
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Items &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Life years lost per case &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Number of cases &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Total &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; YLL &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 66000 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+YLD and DALYs
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Type of complications &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Disability weight &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Number of cases &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Total &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Uncomplicated diabetes &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.049 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 280000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 13720.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Moderate complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.133 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 80000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 10640.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Severe complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.195 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 40000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7800.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total YLD &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32160.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total  burden of disease &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98160.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; DALYs per 100,000 population &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1963.2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+# DALYs after the health education program
+
+YLL
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Items &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Life years lost per case &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Number of cases &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Total &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; YLL &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 44000 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+YLD and DALYs
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Type of complications &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Disability weight &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Number of cases &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Total &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Uncomplicated diabetes &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.049 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 280000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 13720.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Moderate complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.133 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 13300.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Severe complication &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.195 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3900.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total YLD &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30920.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total  burden of disease &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 74920.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; DALYs per 100,000 population &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1498.4 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+`\(\Delta DALYs = 98160 - 74920 = 23240\)`
 
 ---
 class: center middle
